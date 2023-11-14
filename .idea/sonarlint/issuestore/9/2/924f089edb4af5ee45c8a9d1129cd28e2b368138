@@ -1,7 +1,5 @@
 
-‹
-java:S1488""iImmediately return this expression instead of assigning it to the temporary variable "abbreviatedResult".(íÌıêüÿÿÿÿ8üĞ½î¼1
 7
-java:S1220""Move this file to a named package.8Úåæí¼1
-L	java:S106"+Replace this use of System.out by a logger.(¶ÊÏùÿÿÿÿ8êåæí¼1
-G	java:S106"+Replace this use of System.out by a logger.(ôæš˜8íåæí¼1
+java:S1220""Move this file to a named package.8«ÁÁş¼1
+L	java:S106"+Replace this use of System.out by a logger.(¶ÊÏùÿÿÿÿ8»ÁÁş¼1
+G	java:S106"+Replace this use of System.out by a logger.(ôæš˜8ËÁÁş¼1

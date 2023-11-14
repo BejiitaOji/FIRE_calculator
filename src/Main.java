@@ -9,29 +9,7 @@ public class Main {
         if(startYear < 2002 || startYear >= 2022){
             throw new IllegalArgumentException();
         }
-        double abbreviatedResult = getAbbreviatedResult(startYear);
+        double abbreviatedResult = Calculate.getAbbreviatedResult(startYear);
         System.out.println(abbreviatedResult);
-    }
-
-    private static double getAbbreviatedResult(int startYear) {
-        int counter = 1;
-        double[] profitList = new double[2022 - startYear];
-        for (int year = startYear; year < 2022; year++) {
-            double startIndex = Constants.MOEX_RATE[year - 2002];
-            double finalIndex = Constants.MOEX_RATE[year - 2002 + 1];
-            double profit = (finalIndex - startIndex) / startIndex * 100;
-            double inflation = Constants.INFLATION_RATE[year - 2002];
-            double percentageOfProfit = profit - inflation;
-
-            profitList[counter - 1] = percentageOfProfit;
-            counter++;
-        }
-        double sum = 0;
-        for (double v : profitList) {
-            sum += v;
-        }
-        double result = sum / counter;
-        double abbreviatedResult = Math.round(result * 2) / 2.0;
-        return abbreviatedResult;
     }
 }
