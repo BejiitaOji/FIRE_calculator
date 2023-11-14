@@ -3,29 +3,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IllegalArgumentException {
         Scanner scanner = new Scanner(System.in);
-        String year = scanner.nextLine();
-        int years = Integer.parseInt(year);
-        if(years < 2002 || years >= 2022){
+        System.out.println("Введите год начала жизни на проценты с 2002 по 2021 включительно");
+        String input = scanner.nextLine();
+        int startYear = Integer.parseInt(input);
+        if(startYear < 2002 || startYear >= 2022){
             throw new IllegalArgumentException();
         }
         int counter = 1;
-        double[] arrTest = new double[2022 - years];
-        for (int i = years; i < 2022; i++) {
-            double startPrice = Constants.MOEX_RATE[i - 2002];
-            double finalPrice = Constants.MOEX_RATE[i - 2002 + 1];
-            double profit = (finalPrice - startPrice) / startPrice * 100;
-            double infl = Constants.INFLATION_RATE[i - 2002];
-            double percentageForLife = profit - infl;
+        double[] profitList = new double[2022 - startYear];
+        for (int year = startYear; year < 2022; year++) {
+            double startIndex = Constants.MOEX_RATE[year - 2002];
+            double finalIndex = Constants.MOEX_RATE[year - 2002 + 1];
+            double profit = (finalIndex - startIndex) / startIndex * 100;
+            double inflation = Constants.INFLATION_RATE[year - 2002];
+            double percentageOfProfit = profit - inflation;
 
-            arrTest[counter - 1] = percentageForLife;
+            profitList[counter - 1] = percentageOfProfit;
             counter++;
         }
         double sum = 0;
-        for (double v : arrTest) {
+        for (double v : profitList) {
             sum += v;
         }
-        double number = sum / counter;
-        double result = Math.round(number * 2) / 2.0;
-        System.out.println(result);
+        double result = sum / counter;
+        double abbreviatedResult = Math.round(result * 2) / 2.0;
+        System.out.println(abbreviatedResult);
     }
 }
