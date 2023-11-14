@@ -9,6 +9,11 @@ public class Main {
         if(startYear < 2002 || startYear >= 2022){
             throw new IllegalArgumentException();
         }
+        double abbreviatedResult = getAbbreviatedResult(startYear);
+        System.out.println(abbreviatedResult);
+    }
+
+    private static double getAbbreviatedResult(int startYear) {
         int counter = 1;
         double[] profitList = new double[2022 - startYear];
         for (int year = startYear; year < 2022; year++) {
@@ -27,6 +32,6 @@ public class Main {
         }
         double result = sum / counter;
         double abbreviatedResult = Math.round(result * 2) / 2.0;
-        System.out.println(abbreviatedResult);
+        return abbreviatedResult;
     }
 }
