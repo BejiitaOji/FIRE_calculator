@@ -1,7 +1,5 @@
 
 7
-java:S1220""Move this file to a named package.8¾•†À1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ò®ğğ8êî†À1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(´İ“É8ëî†À1
-L	java:S106"+Replace this use of System.out by a logger.(¶ÊÏùÿÿÿÿ8Ä•†À1
-G	java:S106"+Replace this use of System.out by a logger.(ôæš˜8Ç•†À1
+java:S1220""Move this file to a named package.8Ÿ¾µÀ1
+L	java:S106"+Replace this use of System.out by a logger.(¶ÊÏùÿÿÿÿ8¤¾µÀ1
+G	java:S106"+Replace this use of System.out by a logger.(ôæš˜8¦¾µÀ1

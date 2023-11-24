@@ -1,4 +1,7 @@
 public class Constants {
+    public static final int START_YEAR = 2002;
+    public static final int FINAL_YEAR = 2022;
+    public static final double STEP = 0.5;
     //Индекс мос биржи с 2002 по 2022 сверху вниз
     public static final double[] MOEX_RATE = {
             417.42,
