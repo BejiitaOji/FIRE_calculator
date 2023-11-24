@@ -1,6 +1,6 @@
 public class Calculate {
-    private static int startYear = 2002;
-    private static int finalYear = 2022;
+    private static final int startYear = 2002;
+    private static final int finalYear = 2022;
     public static double getAbbreviatedResult(int inputYear) {
         double result = 0.0;
 
@@ -30,8 +30,8 @@ public class Calculate {
     }
 
     private static double calculateProfit(int year) {
-        double startIndex = Constants.MOEX_RATE[year - 2002];
-        double finalIndex = Constants.MOEX_RATE[year + 1 - 2002];
+        double startIndex = Constants.MOEX_RATE[year - startYear];
+        double finalIndex = Constants.MOEX_RATE[year + 1 - startYear];
         double profit = (finalIndex - startIndex) / startIndex * 100;
         return profit;
     }

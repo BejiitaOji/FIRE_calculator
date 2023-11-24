@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-    private static int startYear = 2002;
-    private static int finalYear = 2022;
+    private static final int startYear = 2002;
+    private static final int finalYear = 2022;
     public static void main(String[] args) throws IllegalArgumentException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите год начала жизни на проценты с 2002 по 2021 включительно");
